@@ -28,7 +28,8 @@
             <h2 class="text-2xl font-bold mb-3">À propos de moi</h2>
             <p class="text-gray-700">
 
-                Développeur Full Stack avec 9 ans d’expérience dans la conception, le développement et l’optimisation d’applications performantes. Expert en <strong>Java, Angular et C# </strong>, j’ai travaillé sur des projets variés intégrant des architectures modernes <strong>(microservices, cloud)</strong> et des technologies avancées <strong>(Azure, Docker, Jenkins, Kubernetes)</strong>. Passionné par l’innovation, je cherche à résoudre des problèmes complexes et à créer des solutions robustes qui ont un impact.
+                
+                Développeur Full Stack avec <span id="experience-years"></span> ans d’expérience dans la conception, le développement et l’optimisation d’applications performantes. Expert en <strong>Java, Angular et C# </strong>, j’ai travaillé sur des projets variés intégrant des architectures modernes <strong>(microservices, cloud)</strong> et des technologies avancées <strong>(Azure, Docker, Jenkins, Kubernetes)</strong>. Passionné par l’innovation, je cherche à résoudre des problèmes complexes et à créer des solutions robustes qui ont un impact.
             </p>
         </section>
 
@@ -109,5 +110,18 @@
         © 2024 Harris Zinsouvi. Tous droits réservés.
     </footer>
 
+    <script>
+    (function () {
+        // Année de début de carrière
+        const startYear = 2015;
+
+        // Calcul automatique
+        const currentYear = new Date().getFullYear();
+        const years = currentYear - startYear;
+
+        // Injection dans la page
+        document.getElementById("experience-years").textContent = years;
+    })();
+</script>
 </body>
 </html>
