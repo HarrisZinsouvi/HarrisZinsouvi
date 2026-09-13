@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Harris Zinsouvi — Software Architect &amp; Senior Full Stack Engineer</title>
+<meta name="description" content="Harris Zinsouvi, architecte logiciel et software engineer basé à Cotonou, Bénin. Conception de systèmes distribués, architectures microservices, cloud et DevOps pour institutions publiques et organisations internationales.">
+<meta name="author" content="Harris Zinsouvi">
+<meta name="theme-color" content="#2F55FF">
+<link rel="canonical" href="https://votre-domaine.tld/"><!-- à remplacer par votre nom de domaine réel -->
+
+<!-- Open Graph / LinkedIn preview -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Harris Zinsouvi — Software Architect &amp; Senior Full Stack Engineer">
+<meta property="og:description" content="Architecture logicielle, systèmes distribués, cloud et DevOps. 11 ans d'expérience au service d'institutions publiques et internationales.">
+<meta property="og:url" content="https://votre-domaine.tld/"><!-- à remplacer -->
+<meta property="og:image" content="https://votre-domaine.tld/assets/og-image.jpg"><!-- à remplacer -->
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="fr_FR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Harris Zinsouvi — Software Architect &amp; Senior Full Stack Engineer">
+<meta name="twitter:description" content="Architecture logicielle, systèmes distribués, cloud et DevOps. 11 ans d'expérience au service d'institutions publiques et internationales.">
+<meta name="twitter:image" content="https://votre-domaine.tld/assets/og-image.jpg"><!-- à remplacer -->
+
+<!-- Favicon : monogramme "HZ" en SVG inline, aucun fichier externe requis -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232F55FF'/%3E%3Ctext x='32' y='43' font-family='Arial, Helvetica, sans-serif' font-weight='700' font-size='26' fill='white' text-anchor='middle'%3EHZ%3C/text%3E%3C/svg%3E">
+
+<!-- Une seule famille de polices, deux graisses de rôle (texte / technique), chargée avec parcimonie -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+
+<!-- JSON-LD : identité structurée pour les moteurs de recherche -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Harris Zinsouvi",
+  "jobTitle": "Software Architect",
+  "url": "https://votre-domaine.tld/",
+  "email": "mailto:harriszinsouvi@gmail.com",
+  "address": { "@type": "PostalAddress", "addressLocality": "Cotonou", "addressCountry": "BJ" },
+  "sameAs": [
+    "https://linkedin.com/in/harris-zinsouvi",
+    "https://github.com/HarrisZinsouvi"
+  ],
+  "knowsAbout": ["Software Architecture", "Microservices", "Kubernetes", "Cloud Computing", "DevOps", "Java", "Spring Boot", "Angular", ".NET"]
+}
+</script>
+
+<style>
+  /* ============ 1. Design tokens ============ */
+  :root{
+    --paper: #F7F8FA;
+    --surface: #FFFFFF;
+    --ink: #12141C;
+    --muted: #565B66;
+    --line: #E3E5EB;
+    --accent: #2F55FF;
+    --accent-ink: #1B3ACC;
+    --accent-soft: #EEF1FF;
+    --font-sans: "IBM Plex Sans", -apple-system, "Segoe UI", Roboto, sans-serif;
+    --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+    --container: 1120px;
+    --gutter: clamp(1.25rem, 4vw, 3rem);
+    --radius: 4px;
+  }
+
+  /* ============ 2. Reset & base ============ */
+  *, *::before, *::after{ box-sizing: border-box; }
+  html{ scroll-behavior: smooth; }
+  body{
+    margin:0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--font-sans);
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  img, svg{ display:block; max-width:100%; }
+  a{ color: inherit; }
+  ul{ margin:0; padding:0; list-style:none; }
+  h1,h2,h3,p,dl,dd{ margin:0; }
+  button{ font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+
+  h1,h2,h3{ font-weight:600; letter-spacing:-0.01em; }
+  h2{ font-size: clamp(1.6rem, 2.4vw, 2rem); }
+  h3{ font-size: 1.15rem; }
+
+  .container{
+    max-width: var(--container);
+    margin-inline: auto;
+    padding-inline: var(--gutter);
+  }
+
+  .skip-link{
+    position:absolute; left:1rem; top:-3rem;
+    background:var(--ink); color:#fff; padding:.6rem 1rem;
+    border-radius: var(--radius); z-index:100; transition: top .15s ease;
+  }
+  .skip-link:focus{ top:1rem; }
+
+  .visually-hidden{
+    position:absolute; width:1px; height:1px; padding:0; margin:-1px;
+    overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0;
+  }
+
+  :focus-visible{ outline: 2px solid var(--accent); outline-offset: 3px; }
+
+  section{ padding-block: clamp(3.5rem, 7vw, 6.5rem); border-top: 1px solid var(--line); }
+  section > .container > header{ margin-bottom: 2.5rem; }
+
+  .lede{ font-size: 1.15rem; max-width: 62ch; color: var(--ink); }
+  .body-text{ max-width: 68ch; color: var(--muted); margin-top:1rem; }
+
+  /* ============ 3. Header / nav ============ */
+  .site-header{
+    position: sticky; top:0; z-index:50;
+    background: var(--paper);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav-row{
+    display:flex; align-items:center; justify-content:space-between;
+    padding-block: .9rem;
+  }
+  .brand{ display:flex; align-items:center; gap:.6rem; font-weight:600; text-decoration:none; }
+  .brand-mark{
+    width:34px; height:34px; border-radius:6px; background: var(--accent);
+    color:#fff; display:flex; align-items:center; justify-content:center;
+    font-family: var(--font-mono); font-size:.85rem; font-weight:500; flex-shrink:0;
+  }
+  .brand-name{ font-size:1rem; }
+
+  .nav-menu{ display:flex; align-items:center; gap:2rem; }
+  .nav-link{
+    text-decoration:none; font-size:.95rem; color: var(--muted);
+    padding-block:.25rem; border-bottom:2px solid transparent;
+  }
+  .nav-link:hover, .nav-link.is-active{ color: var(--ink); border-color: var(--accent); }
+
+  .nav-toggle{ display:none; padding:.4rem; }
+  .nav-toggle svg line{ transform-box: fill-box; transform-origin: center; transition: transform .15s ease, opacity .15s ease; }
+  .nav-toggle[aria-expanded="true"] line:nth-child(1){ transform: translateY(6px) rotate(45deg); }
+  .nav-toggle[aria-expanded="true"] line:nth-child(2){ opacity:0; }
+  .nav-toggle[aria-expanded="true"] line:nth-child(3){ transform: translateY(-6px) rotate(-45deg); }
+
+  /* ============ 4. Buttons & tags ============ */
+  .btn{
+    display:inline-flex; align-items:center; gap:.5rem;
+    padding:.75rem 1.4rem; border-radius: var(--radius);
+    font-size:.95rem; font-weight:500; text-decoration:none;
+    border:1px solid transparent; transition: background-color .15s ease, border-color .15s ease, color .15s ease;
+  }
+  .btn-primary{ background: var(--accent); color:#fff; }
+  .btn-primary:hover{ background: var(--accent-ink); }
+  .btn-ghost{ border-color: var(--line); color: var(--ink); }
+  .btn-ghost:hover{ border-color: var(--accent); color: var(--accent); }
+
+  .tag{
+    display:inline-flex; align-items:center;
+    font-family: var(--font-mono); font-size:.8rem;
+    padding:.35rem .65rem; border:1px solid var(--line); border-radius: var(--radius);
+    color: var(--muted); background: var(--surface);
+  }
+  .tag-row{ display:flex; flex-wrap:wrap; gap:.5rem; }
+  .project-tag{ align-self:flex-start; }
+
+  .icon{ width:1em; height:1em; }
+
+  /* ============ 5. Hero ============ */
+  .hero{ border-top:0; padding-block: clamp(3rem, 8vw, 5.5rem) clamp(3.5rem, 7vw, 6rem); }
+  .hero-grid{
+    display:grid; grid-template-columns: 1.1fr 0.9fr; gap: clamp(2rem, 5vw, 4rem);
+    align-items:center;
+  }
+  .hero-role{ color: var(--accent); font-size:1.05rem; font-weight:500; margin-top:.9rem; }
+  .hero-name{ font-size: clamp(2.5rem, 5vw, 4rem); line-height:1.05; margin-top:.35rem; }
+  .hero-tagline{ margin-top:1.25rem; max-width:52ch; font-size:1.1rem; color: var(--muted); }
+  .hero-stack{ margin-top:1.75rem; }
+  .hero-actions{ display:flex; flex-wrap:wrap; gap:.9rem; margin-top:2rem; }
+  .hero-social{ display:flex; gap:1.5rem; margin-top:2rem; }
+  .hero-social a{ display:inline-flex; align-items:center; gap:.4rem; text-decoration:none; color: var(--muted); font-size:.9rem; }
+  .hero-social a:hover{ color: var(--accent); }
+
+  .hero-diagram{ width:100%; }
+  .hero-diagram svg{ width:100%; height:auto; }
+  .diagram-node rect{ fill: var(--surface); stroke: var(--line); stroke-width:1.5; }
+  .diagram-node.is-accent rect{ fill: var(--accent); stroke: var(--accent); }
+  .diagram-node text{ font-family: var(--font-mono); font-size:11px; fill: var(--muted); }
+  .diagram-node.is-accent text{ fill:#fff; }
+  .diagram-line{ stroke: var(--line); stroke-width:1.5; fill:none; }
+  .diagram-line.is-dashed{ stroke-dasharray:3 4; }
+
+  @media (prefers-reduced-motion: no-preference){
+    .diagram-node, .diagram-line{
+      animation: diagram-in .5s ease both;
+    }
+    .diagram-line{ stroke-dasharray: 400; stroke-dashoffset:400; animation: diagram-draw .6s ease both; }
+    @keyframes diagram-in{ from{ opacity:0; transform: translateY(4px); } to{ opacity:1; transform:none; } }
+    @keyframes diagram-draw{ to{ stroke-dashoffset:0; } }
+    .d-delay-0{ animation-delay:0s; }
+    .d-delay-1{ animation-delay:.15s; }
+    .d-delay-2{ animation-delay:.3s; }
+    .d-delay-3{ animation-delay:.42s; }
+    .d-delay-4{ animation-delay:.56s; }
+    .d-delay-5{ animation-delay:.7s; }
+  }
+
+  /* ============ 6. About / stats ============ */
+  .stats{ display:flex; flex-wrap:wrap; gap: clamp(1.5rem, 4vw, 3rem); margin-top:2.5rem; }
+  .stat{ min-width:9rem; }
+  .stat-number{ display:block; font-size:2.2rem; font-weight:700; color: var(--accent); }
+  .stat-label{ display:block; color: var(--muted); font-size:.9rem; margin-top:.15rem; }
+
+  /* ============ 7. Expertise ============ */
+  .expertise-grid{
+    display:grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+    gap:0;
+  }
+  .expertise-item{ padding: 1.5rem 1.5rem 1.5rem 0; border-top:1px solid var(--line); }
+  .expertise-item h3{ margin-bottom:.5rem; }
+  .expertise-item p{ color: var(--muted); font-size:.95rem; }
+
+  /* ============ 8. Stack ============ */
+  .stack-grid{ display:grid; gap:2rem; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); }
+  .stack-cat h3{ font-size:.95rem; color: var(--muted); font-weight:500; margin-bottom:.85rem; }
+
+  /* ============ 9. Projects ============ */
+  .project-grid{ display:grid; gap:1.5rem; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); }
+  .project-card{
+    border:1px solid var(--line); border-radius: var(--radius); background: var(--surface);
+    padding:1.75rem; display:flex; flex-direction:column; gap:.9rem;
+    transition: border-color .15s ease;
+  }
+  .project-card:hover{ border-color: var(--accent); }
+  .project-card h3{ font-size:1.1rem; }
+  .project-card p{ color: var(--muted); font-size:.95rem; flex-grow:1; }
+  .project-link{
+    display:inline-flex; align-items:center; gap:.4rem; text-decoration:none;
+    color: var(--accent); font-size:.9rem; font-weight:500;
+  }
+  .project-link:hover{ color: var(--accent-ink); }
+
+  /* ============ 10. Timeline ============ */
+  .timeline{ position:relative; margin-top:1rem; }
+  .timeline-item{
+    position:relative; padding-left:2rem; padding-bottom:2.25rem;
+    border-left:1px solid var(--line);
+  }
+  .timeline-item:last-child{ border-color:transparent; padding-bottom:0; }
+  .timeline-item::before{
+    content:""; position:absolute; left:-5px; top:.3rem;
+    width:9px; height:9px; border-radius:50%;
+    background: var(--paper); border:2px solid var(--accent);
+  }
+  .timeline-item.is-example::before{ border-style:dashed; }
+  .timeline-date{ font-family: var(--font-mono); font-size:.85rem; color: var(--accent); }
+  .timeline-item h3{ font-size:1.05rem; margin-top:.3rem; }
+  .timeline-item p{ color: var(--muted); font-size:.95rem; margin-top:.35rem; max-width:60ch; }
+  .timeline-item.is-example{ opacity:.75; }
+  .timeline-item.is-example h3::after{
+    content:"— exemple à remplacer"; font-weight:400; font-size:.8rem; color: var(--muted); margin-left:.5rem;
+  }
+
+  /* ============ 11. Contact ============ */
+  .contact-grid{ display:flex; flex-wrap:wrap; gap:3rem; align-items:flex-start; justify-content:space-between; }
+  .contact-list{ display:flex; flex-direction:column; gap:1rem; }
+  .contact-list a{
+    display:inline-flex; align-items:center; gap:.6rem; text-decoration:none;
+    font-size:1.05rem; color: var(--ink);
+  }
+  .contact-list a:hover{ color: var(--accent); }
+
+  /* ============ 12. Footer ============ */
+  .site-footer{ border-top:1px solid var(--line); padding-block:2rem; }
+  .footer-row{ display:flex; flex-wrap:wrap; gap:1rem; justify-content:space-between; color: var(--muted); font-size:.85rem; }
+  .footer-row a{ text-decoration:none; color: var(--muted); }
+  .footer-row a:hover{ color: var(--accent); }
+
+  /* ============ 13. Responsive ============ */
+  @media (max-width: 860px){
+    .hero-grid{ grid-template-columns:1fr; }
+    .hero-diagram{ order:-1; max-width:340px; margin-inline:auto; }
+  }
+
+  @media (max-width: 720px){
+    .nav-menu{
+      position:fixed; inset: 62px 0 0 0; background: var(--paper);
+      flex-direction:column; align-items:flex-start; gap:0;
+      padding: 1rem var(--gutter); border-top:1px solid var(--line);
+      transform: translateY(-8px); opacity:0; pointer-events:none;
+      transition: opacity .15s ease, transform .15s ease;
+    }
+    .nav-menu.is-open{ opacity:1; transform:none; pointer-events:auto; }
+    .nav-menu .nav-link{ width:100%; padding-block:.9rem; border-bottom:1px solid var(--line); border-radius:0; }
+    .nav-menu .nav-link:hover, .nav-menu .nav-link.is-active{ border-color: var(--line); }
+    .nav-toggle{ display:block; }
+  }
+
+  /* ============ 14. Motion & accessibility floor ============ */
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior:auto; }
+    *, *::before, *::after{
+      animation-duration:.01ms !important; animation-iteration-count:1 !important;
+      transition-duration:.01ms !important;
+    }
+  }
+</style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Aller au contenu principal</a>
+
+  <header class="site-header">
+    <nav class="container nav-row" aria-label="Navigation principale">
+      <a class="brand" href="#top" aria-label="Harris Zinsouvi — Accueil">
+        <span class="brand-mark" aria-hidden="true">HZ</span>
+        <span class="brand-name">Harris Zinsouvi</span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Ouvrir le menu">
+        <svg class="icon" id="navToggleIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="22" height="22">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a class="nav-link" href="#apropos">À propos</a></li>
+        <li><a class="nav-link" href="#expertise">Expertise</a></li>
+        <li><a class="nav-link" href="#stack">Stack</a></li>
+        <li><a class="nav-link" href="#projets">Projets</a></li>
+        <li><a class="nav-link" href="#parcours">Parcours</a></li>
+        <li><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ HERO ============ -->
+    <section id="top" class="hero" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div>
+          <p class="hero-role">Software Architect · Senior Full Stack Engineer</p>
+          <h1 id="hero-title" class="hero-name">Harris Zinsouvi</h1>
+          <p class="hero-tagline">Je conçois des architectures logicielles qui tiennent la charge — systèmes distribués, cloud et automatisation, pensées pour durer.</p>
+
+          <ul class="tag-row hero-stack" aria-label="Technologies clés">
+            <li class="tag">Java</li>
+            <li class="tag">Spring Boot</li>
+            <li class="tag">Angular</li>
+            <li class="tag">Kubernetes</li>
+            <li class="tag">Docker</li>
+            <li class="tag">Cloud</li>
+          </ul>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projets">Voir mes projets</a>
+            <a class="btn btn-ghost" href="#contact">Me contacter</a>
+          </div>
+
+          <div class="hero-social">
+            <a href="https://linkedin.com/in/harris-zinsouvi" target="_blank" rel="noopener">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="9" width="4" height="12"></rect><circle cx="5" cy="4.5" r="2"></circle><path d="M11 9v12M11 14c0-3 3-5 6-3.5 1.6.8 2 2.3 2 4v6.5"></path></svg>
+              LinkedIn<span class="visually-hidden"> (nouvel onglet)</span>
+            </a>
+            <a href="https://github.com/HarrisZinsouvi" target="_blank" rel="noopener">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 3v4M10 3v4M6 3h8a2 2 0 0 1 2 2v3a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V5a2 2 0 0 1 2-2Z"></path><path d="M9 21v-3a3 3 0 0 1 3-3v0a3 3 0 0 1 3 3v3"></path></svg>
+              GitHub<span class="visually-hidden"> (nouvel onglet)</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-diagram" aria-hidden="true">
+          <svg viewBox="0 0 480 340" xmlns="http://www.w3.org/2000/svg">
+            <!-- client -> gateway -->
+            <line class="diagram-line d-delay-0" x1="240" y1="46" x2="240" y2="76"/>
+            <g class="diagram-node d-delay-0"><rect x="190" y="10" width="100" height="36" rx="4"/><text x="240" y="32" text-anchor="middle">Client</text></g>
+
+            <!-- gateway -->
+            <g class="diagram-node is-accent d-delay-1"><rect x="170" y="76" width="140" height="44" rx="4"/><text x="240" y="102" text-anchor="middle">API Gateway</text></g>
+
+            <!-- gateway -> monitoring (dashed) -->
+            <line class="diagram-line is-dashed d-delay-4" x1="310" y1="98" x2="352" y2="66"/>
+            <g class="diagram-node d-delay-4"><rect x="352" y="46" width="110" height="36" rx="4" stroke-dasharray="3 4"/><text x="407" y="68" text-anchor="middle">Monitoring</text></g>
+
+            <!-- gateway -> services -->
+            <line class="diagram-line d-delay-1" x1="240" y1="120" x2="90" y2="176"/>
+            <line class="diagram-line d-delay-2" x1="240" y1="120" x2="240" y2="176"/>
+            <line class="diagram-line d-delay-3" x1="240" y1="120" x2="390" y2="176"/>
+
+            <g class="diagram-node d-delay-1"><rect x="30" y="176" width="120" height="40" rx="4"/><text x="90" y="200" text-anchor="middle">Auth</text></g>
+            <g class="diagram-node d-delay-2"><rect x="180" y="176" width="120" height="40" rx="4"/><text x="240" y="200" text-anchor="middle">Core API</text></g>
+            <g class="diagram-node d-delay-3"><rect x="330" y="176" width="120" height="40" rx="4"/><text x="390" y="200" text-anchor="middle">Notify</text></g>
+
+            <!-- services -> data -->
+            <line class="diagram-line d-delay-2" x1="90" y1="216" x2="180" y2="272"/>
+            <line class="diagram-line d-delay-3" x1="240" y1="216" x2="240" y2="272"/>
+            <line class="diagram-line d-delay-4" x1="390" y1="216" x2="300" y2="272"/>
+
+            <g class="diagram-node d-delay-5"><rect x="150" y="272" width="180" height="44" rx="4"/><text x="240" y="298" text-anchor="middle">Data</text></g>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ À PROPOS ============ -->
+    <section id="apropos" aria-labelledby="apropos-title">
+      <div class="container">
+        <header><h2 id="apropos-title">À propos</h2></header>
+        <p class="lede">Architecte logiciel basé à Cotonou, je conçois et fais évoluer des systèmes distribués pour des institutions publiques et des organisations internationales depuis 11 ans.</p>
+        <p class="body-text">Mon terrain de prédilection : l'architecture microservices, le cloud et le DevOps — avec une attention constante portée à la scalabilité, à l'automatisation et à la fiabilité. J'aime autant dessiner les schémas d'un système que les faire vivre en production, et accompagner les équipes qui les exploitent au quotidien.</p>
+
+        <div class="stats">
+          <div class="stat"><span class="stat-number">11+</span><span class="stat-label">ans d'expérience</span></div>
+          <div class="stat"><span class="stat-number">4</span><span class="stat-label">portails publics en production</span></div>
+          <div class="stat"><span class="stat-number">2</span><span class="stat-label">certifications cloud &amp; intégration</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EXPERTISE ============ -->
+    <section id="expertise" aria-labelledby="expertise-title">
+      <div class="container">
+        <header><h2 id="expertise-title">Expertise</h2></header>
+        <div class="expertise-grid">
+          <div class="expertise-item">
+            <h3>Architecture logicielle</h3>
+            <p>Conception d'architectures robustes et évolutives, de la modélisation des systèmes à l'intégration des composants.</p>
+          </div>
+          <div class="expertise-item">
+            <h3>Développement Full Stack</h3>
+            <p>Java/Spring Boot, Angular/TypeScript et C#/.NET pour livrer des applications de bout en bout.</p>
+          </div>
+          <div class="expertise-item">
+            <h3>DevOps &amp; Cloud</h3>
+            <p>Pipelines CI/CD, conteneurisation et déploiement cloud pour des mises en production fiables et répétables.</p>
+          </div>
+          <div class="expertise-item">
+            <h3>Microservices &amp; systèmes distribués</h3>
+            <p>Découpage, orchestration et supervision de systèmes distribués à forte disponibilité.</p>
+          </div>
+          <div class="expertise-item">
+            <h3>Transformation digitale</h3>
+            <p>Accompagnement des institutions publiques et privées dans la modernisation de leurs systèmes d'information.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ STACK TECHNIQUE ============ -->
+    <section id="stack" aria-labelledby="stack-title">
+      <div class="container">
+        <header><h2 id="stack-title">Stack technique</h2></header>
+        <div class="stack-grid">
+          <div class="stack-cat">
+            <h3>Backend</h3>
+            <div class="tag-row">
+              <span class="tag">Java</span><span class="tag">Spring Boot</span><span class="tag">C#</span><span class="tag">.NET</span>
+            </div>
+          </div>
+          <div class="stack-cat">
+            <h3>Frontend</h3>
+            <div class="tag-row">
+              <span class="tag">Angular</span><span class="tag">TypeScript</span>
+            </div>
+          </div>
+          <div class="stack-cat">
+            <h3>DevOps / Cloud</h3>
+            <div class="tag-row">
+              <span class="tag">Docker</span><span class="tag">Kubernetes</span><span class="tag">Jenkins</span><span class="tag">Azure</span>
+            </div>
+          </div>
+          <div class="stack-cat">
+            <h3>Architecture / Intégration</h3>
+            <div class="tag-row">
+              <span class="tag">WSO2</span><span class="tag">Oracle Cloud Infrastructure</span><span class="tag">API Gateway</span><span class="tag">GED</span>
+            </div>
+          </div>
+          <div class="stack-cat">
+            <h3>Bases de données</h3>
+            <!-- Exemples génériques : remplacez par les SGBD que vous utilisez réellement -->
+            <div class="tag-row">
+              <span class="tag">PostgreSQL</span><span class="tag">Oracle</span><span class="tag">SQL Server</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROJETS ============ -->
+    <section id="projets" aria-labelledby="projets-title">
+      <div class="container">
+        <header>
+          <h2 id="projets-title">Projets</h2>
+          <p class="body-text">Une sélection de réalisations, principalement au service d'institutions publiques béninoises.</p>
+        </header>
+
+        <div class="project-grid">
+          <!-- Modèle de carte à dupliquer pour ajouter un projet -->
+          <article class="project-card">
+            <span class="tag project-tag">Secteur public · MASM</span>
+            <h3>Bibliothèque numérique — Protection de l'enfance</h3>
+            <p>Plateforme numérique de ressources sur la protection de l'enfance, pour le Ministère des Affaires Sociales et de la Microfinance du Bénin.</p>
+            <a class="project-link" href="https://bibliotheque.social.gouv.bj/pe" target="_blank" rel="noopener">
+              Voir le projet
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"></path></svg>
+              <span class="visually-hidden">(nouvel onglet)</span>
+            </a>
+          </article>
+
+          <article class="project-card">
+            <span class="tag project-tag">Secteur public · MASM</span>
+            <h3>Bibliothèque numérique — Violences basées sur le genre</h3>
+            <p>Bibliothèque numérique de ressources dédiée à la lutte contre les violences basées sur le genre.</p>
+            <a class="project-link" href="https://bibliotheque.social.gouv.bj/vbg" target="_blank" rel="noopener">
+              Voir le projet
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"></path></svg>
+              <span class="visually-hidden">(nouvel onglet)</span>
+            </a>
+          </article>
+
+          <article class="project-card">
+            <span class="tag project-tag">Secteur public · MEF</span>
+            <h3>Portail des marchés publics du Bénin</h3>
+            <p>Portail officiel des marchés publics du Bénin, porté par le Ministère de l'Économie et des Finances.</p>
+            <a class="project-link" href="https://marches-publics.bj/" target="_blank" rel="noopener">
+              Voir le projet
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"></path></svg>
+              <span class="visually-hidden">(nouvel onglet)</span>
+            </a>
+          </article>
+
+          <article class="project-card">
+            <span class="tag project-tag">Performance &amp; tests</span>
+            <h3>Digital User Experience</h3>
+            <p>Plateforme web et mobile de tests automatisés de performance et d'expérience utilisateur digitale.</p>
+            <a class="project-link" href="https://bridge2e.com/" target="_blank" rel="noopener">
+              Voir le projet
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"></path></svg>
+              <span class="visually-hidden">(nouvel onglet)</span>
+            </a>
+          </article>
+          <!-- Fin du modèle -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PARCOURS ============ -->
+    <section id="parcours" aria-labelledby="parcours-title">
+      <div class="container">
+        <header><h2 id="parcours-title">Parcours</h2></header>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <span class="timeline-date">2015</span>
+            <h3>Début de carrière</h3>
+            <p>Premiers projets professionnels en développement logiciel et montée en compétences sur les architectures web.</p>
+          </div>
+          <div class="timeline-item">
+            <span class="timeline-date">2015 – 2023</span>
+            <h3>Parcours académique Bénin / Paris</h3>
+            <p>Quatre diplômes obtenus entre des établissements béninois et parisiens, en parallèle de la pratique professionnelle.</p>
+          </div>
+          <div class="timeline-item">
+            <span class="timeline-date">Aujourd'hui</span>
+            <h3>Architecte logiciel senior</h3>
+            <p>Conception de systèmes distribués et accompagnement de la transformation digitale pour des institutions publiques et internationales.</p>
+          </div>
+          <!-- Bloc à dupliquer pour chaque poste ou mission réelle -->
+          <div class="timeline-item is-example">
+            <span class="timeline-date">Année</span>
+            <h3>Poste — Entreprise / Client</h3>
+            <p>Décrivez ici le contexte de la mission, vos responsabilités et les résultats obtenus.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <header><h2 id="contact-title">Contact</h2></header>
+        <div class="contact-grid">
+          <p class="lede">Un projet, une opportunité, une question d'architecture ? Écrivez-moi.</p>
+          <div class="contact-list">
+            <a href="mailto:harriszinsouvi@gmail.com">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m4 7 8 6 8-6"></path></svg>
+              harriszinsouvi@gmail.com
+            </a>
+            <a href="https://linkedin.com/in/harris-zinsouvi" target="_blank" rel="noopener">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="9" width="4" height="12"></rect><circle cx="5" cy="4.5" r="2"></circle><path d="M11 9v12M11 14c0-3 3-5 6-3.5 1.6.8 2 2.3 2 4v6.5"></path></svg>
+              linkedin.com/in/harris-zinsouvi<span class="visually-hidden"> (nouvel onglet)</span>
+            </a>
+            <a href="https://github.com/HarrisZinsouvi" target="_blank" rel="noopener">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 3v4M10 3v4M6 3h8a2 2 0 0 1 2 2v3a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V5a2 2 0 0 1 2-2Z"></path><path d="M9 21v-3a3 3 0 0 1 3-3v0a3 3 0 0 1 3 3v3"></path></svg>
+              github.com/HarrisZinsouvi<span class="visually-hidden"> (nouvel onglet)</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <span>© <span id="year">2026</span> Harris Zinsouvi — Conçu à Cotonou, Bénin.</span>
+      <a href="#top">Retour en haut</a>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      "use strict";
+
+      // Année courante dans le footer
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      // Menu mobile
+      var toggle = document.getElementById("navToggle");
+      var menu = document.getElementById("navMenu");
+
+      function closeMenu() {
+        menu.classList.remove("is-open");
+        toggle.setAttribute("aria-expanded", "false");
+      }
+      function openMenu() {
+        menu.classList.add("is-open");
+        toggle.setAttribute("aria-expanded", "true");
+      }
+
+      toggle.addEventListener("click", function () {
+        var isOpen = menu.classList.contains("is-open");
+        isOpen ? closeMenu() : openMenu();
+      });
+      menu.addEventListener("click", function (e) {
+        if (e.target.matches(".nav-link")) closeMenu();
+      });
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") closeMenu();
+      });
+
+      // Mise en évidence du lien de nav actif au scroll
+      var sections = Array.prototype.slice.call(document.querySelectorAll("main section[id]"));
+      var links = Array.prototype.slice.call(document.querySelectorAll(".nav-link"));
+
+      if ("IntersectionObserver" in window && sections.length) {
+        var observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (!entry.isIntersecting) return;
+            var id = entry.target.getAttribute("id");
+            links.forEach(function (link) {
+              link.classList.toggle("is-active", link.getAttribute("href") === "#" + id);
+            });
+          });
+        }, { rootMargin: "-45% 0px -50% 0px" });
+
+        sections.forEach(function (s) { observer.observe(s); });
+      }
+    })();
+  </script>
+</body>
+</html>
