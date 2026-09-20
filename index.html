@@ -7,18 +7,19 @@
   <title>Harris Zinsouvi — Architecte Logiciel · Tech Lead · DevOps</title>
   <meta name="description" content="Harris Zinsouvi — Architecte Logiciel, Ingénieur Logiciel Senior et Technical Lead. Architecture SI, Full Stack, API, microservices, DevOps, Cloud et transformation digitale.">
   <meta name="author" content="Harris Aurel Setondé Zinsouvi">
-  <meta name="theme-color" content="#2563eb">
+  <meta name="theme-color" content="#C2410C">
 
   <meta property="og:title" content="Harris Zinsouvi — Architecte Logiciel">
   <meta property="og:description" content="Architecte Logiciel · Senior Full Stack Engineer · Technical Lead · DevOps & Cloud">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.linkedin.com/in/harris-zinsouvi/">
 
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%232563eb'/%3E%3Ctext x='50' y='66' font-size='48' text-anchor='middle' fill='white' font-family='Arial,sans-serif' font-weight='700'%3EHZ%3C/text%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23C2410C'/%3E%3Ctext x='50' y='66' font-size='48' text-anchor='middle' fill='white' font-family='Arial,sans-serif' font-weight='700'%3EHZ%3C/text%3E%3C/svg%3E">
 
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
+      darkMode: 'class',
       theme: {
         extend: {
           boxShadow: {
@@ -36,12 +37,12 @@
     }
     .grid-pattern {
       background-image:
-        linear-gradient(rgba(37, 99, 235, .045) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(37, 99, 235, .045) 1px, transparent 1px);
+        linear-gradient(rgba(194, 65, 12, .045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(194, 65, 12, .045) 1px, transparent 1px);
       background-size: 32px 32px;
     }
     .hero-glow {
-      background: radial-gradient(circle at 75% 30%, rgba(37,99,235,.10), transparent 30%);
+      background: radial-gradient(circle at 75% 30%, rgba(194,65,12,.10), transparent 30%);
     }
     @media (prefers-reduced-motion: no-preference) {
       .hover-lift { transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease; }
@@ -50,6 +51,122 @@
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
     }
+
+    /* =========================================================
+       DARK MODE
+       ========================================================= */
+    html.dark {
+      color-scheme: dark;
+    }
+
+    html.dark body {
+      background: #0b0b0a !important;
+      color: #f5f5f4 !important;
+    }
+
+    html.dark .bg-white {
+      background-color: #111110 !important;
+    }
+
+    html.dark .bg-gray-50 {
+      background-color: #171615 !important;
+    }
+
+    html.dark .bg-gray-950 {
+      background-color: #050505 !important;
+    }
+
+    html.dark .text-gray-950 {
+      color: #fafaf9 !important;
+    }
+
+    html.dark .text-gray-900 {
+      color: #f5f5f4 !important;
+    }
+
+    html.dark .text-gray-800 {
+      color: #e7e5e4 !important;
+    }
+
+    html.dark .text-gray-700 {
+      color: #d6d3d1 !important;
+    }
+
+    html.dark .text-gray-600 {
+      color: #a8a29e !important;
+    }
+
+    html.dark .text-gray-500 {
+      color: #a8a29e !important;
+    }
+
+    html.dark .text-gray-400 {
+      color: #78716c !important;
+    }
+
+    html.dark .border-gray-100 {
+      border-color: #292524 !important;
+    }
+
+    html.dark .border-gray-200 {
+      border-color: #3a3633 !important;
+    }
+
+    html.dark .border-gray-300 {
+      border-color: #57534e !important;
+    }
+
+    html.dark .border-gray-700 {
+      border-color: #44403c !important;
+    }
+
+    html.dark header {
+      background: rgba(11, 11, 10, .90) !important;
+      border-color: #292524 !important;
+    }
+
+    html.dark .grid-pattern {
+      background-image:
+        linear-gradient(rgba(194, 65, 12, .07) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(194, 65, 12, .07) 1px, transparent 1px);
+    }
+
+    html.dark .hero-glow {
+      background: radial-gradient(circle at 75% 30%, rgba(194,65,12,.14), transparent 30%);
+    }
+
+    html.dark .hover\:bg-gray-50:hover {
+      background-color: #1c1917 !important;
+    }
+
+    html.dark .hover\:border-orange-200:hover {
+      border-color: #9a3412 !important;
+    }
+
+    html.dark .bg-orange-50 {
+      background-color: #2b1710 !important;
+    }
+
+    html.dark .bg-orange-100 {
+      background-color: #3a1d12 !important;
+    }
+
+    html.dark .text-orange-700 {
+      color: #fb923c !important;
+    }
+
+    html.dark .text-orange-400 {
+      color: #fb923c !important;
+    }
+
+    html.dark .border-orange-100 {
+      border-color: #5c2815 !important;
+    }
+
+    html.dark .border-orange-200 {
+      border-color: #7c2d12 !important;
+    }
+
   </style>
 
   <script type="application/ld+json">
@@ -81,28 +198,46 @@
   </script>
 </head>
 
-<body class="bg-white text-gray-900 antialiased">
+<body class="bg-white text-gray-900 antialiased transition-colors duration-300">
 
 <!-- NAVIGATION -->
 <header class="sticky top-0 z-50 border-b border-gray-100 bg-white/90 backdrop-blur">
   <nav class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
     <a href="#" class="text-lg font-bold tracking-tight">
-      HZ<span class="text-blue-600">.</span>
+      HZ<span class="text-orange-700">.</span>
     </a>
 
     <div class="hidden items-center gap-7 text-sm font-medium text-gray-600 md:flex">
-      <a href="#about" class="hover:text-blue-600">À propos</a>
-      <a href="#expertise" class="hover:text-blue-600">Expertise</a>
-      <a href="#stack" class="hover:text-blue-600">Stack</a>
-      <a href="#projects" class="hover:text-blue-600">Projets</a>
-      <a href="#experience" class="hover:text-blue-600">Expérience</a>
-      <a href="#education" class="hover:text-blue-600">Formation</a>
+      <a href="#about" class="hover:text-orange-700">À propos</a>
+      <a href="#expertise" class="hover:text-orange-700">Expertise</a>
+      <a href="#stack" class="hover:text-orange-700">Stack</a>
+      <a href="#projects" class="hover:text-orange-700">Projets</a>
+      <a href="#experience" class="hover:text-orange-700">Expérience</a>
+      <a href="#education" class="hover:text-orange-700">Formation</a>
     </div>
 
-    <a href="mailto:harriszinsouvi@gmail.com"
-       class="rounded-full bg-gray-950 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-600">
-      Me contacter
-    </a>
+    <div class="flex items-center gap-2">
+      <button
+        id="theme-toggle"
+        type="button"
+        aria-label="Activer le mode sombre"
+        title="Mode sombre"
+        class="flex h-10 w-10 items-center justify-center rounded-full border border-gray-200 bg-white text-gray-700 transition hover:border-orange-300 hover:text-orange-700 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-200 dark:hover:border-orange-700 dark:hover:text-orange-400"
+      >
+        <svg id="theme-icon-sun" class="hidden h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="4"></circle>
+          <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
+        </svg>
+        <svg id="theme-icon-moon" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"></path>
+        </svg>
+      </button>
+
+      <a href="mailto:harriszinsouvi@gmail.com"
+         class="rounded-full bg-gray-950 px-4 py-2 text-sm font-semibold text-white hover:bg-orange-700 dark:bg-orange-700 dark:hover:bg-orange-800">
+        Me contacter
+      </a>
+    </div>
   </nav>
 </header>
 
@@ -112,12 +247,12 @@
 <section class="hero-glow grid-pattern overflow-hidden border-b border-gray-100">
   <div class="mx-auto max-w-6xl px-5 py-20 sm:py-28 lg:py-32">
     <div class="max-w-4xl">
-      <p class="text-sm font-semibold uppercase tracking-[0.18em] text-blue-600">
+      <p class="text-sm font-semibold uppercase tracking-[0.18em] text-orange-700">
         Architecture logicielle · Ingénierie · DEVOPS · SRE 
       </p>
 
       <h1 class="mt-5 text-5xl font-bold leading-[1.05] tracking-tight text-gray-950 sm:text-7xl">
-        Harris Zinsouvi<span class="text-blue-600">.</span>
+        Harris Zinsouvi<span class="text-orange-700">.</span>
       </h1>
 
       <h2 class="mt-6 max-w-4xl text-2xl font-semibold leading-tight text-gray-700 sm:text-3xl">
@@ -132,7 +267,7 @@
       </p>
 
       <div class="mt-9 flex flex-col gap-3 sm:flex-row">
-        <a href="#projects" class="rounded-lg bg-blue-600 px-5 py-3 text-center font-semibold text-white hover:bg-blue-700">
+        <a href="#projects" class="rounded-lg bg-orange-700 px-5 py-3 text-center font-semibold text-white hover:bg-orange-800">
           Voir mes projets →
         </a>
         <a href="#experience" class="rounded-lg border border-gray-300 px-5 py-3 text-center font-semibold text-gray-800 hover:bg-gray-50">
@@ -156,7 +291,7 @@
 <section id="about" class="mx-auto max-w-6xl px-5 py-20 lg:py-24">
   <div class="grid gap-12 md:grid-cols-[.8fr_2fr]">
     <div>
-      <p class="text-sm font-semibold uppercase tracking-[0.16em] text-blue-600">01 — À propos</p>
+      <p class="text-sm font-semibold uppercase tracking-[0.16em] text-orange-700">01 — À propos</p>
       <h2 class="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">
         De l'architecture<br>à la production.
       </h2>
@@ -202,12 +337,12 @@
 <!-- EXPERTISE -->
 <section id="expertise" class="border-y border-gray-100 bg-gray-50">
   <div class="mx-auto max-w-6xl px-5 py-20 lg:py-24">
-    <p class="text-sm font-semibold uppercase tracking-[0.16em] text-blue-600">02 — Expertise</p>
+    <p class="text-sm font-semibold uppercase tracking-[0.16em] text-orange-700">02 — Expertise</p>
     <h2 class="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">Domaines d'intervention</h2>
 
     <div class="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-      <article class="hover-lift rounded-2xl border border-gray-200 bg-white p-7 hover:border-blue-200 hover:shadow-soft">
-        <p class="text-sm font-bold text-blue-600">01</p>
+      <article class="hover-lift rounded-2xl border border-gray-200 bg-white p-7 hover:border-orange-200 hover:shadow-soft">
+        <p class="text-sm font-bold text-orange-700">01</p>
         <h3 class="mt-4 text-xl font-bold">Architecture logicielle</h3>
         <p class="mt-3 leading-7 text-gray-600">
           Conception de solutions applicatives, architectures distribuées, urbanisation SI,
@@ -215,8 +350,8 @@
         </p>
       </article>
 
-      <article class="hover-lift rounded-2xl border border-gray-200 bg-white p-7 hover:border-blue-200 hover:shadow-soft">
-        <p class="text-sm font-bold text-blue-600">02</p>
+      <article class="hover-lift rounded-2xl border border-gray-200 bg-white p-7 hover:border-orange-200 hover:shadow-soft">
+        <p class="text-sm font-bold text-orange-700">02</p>
         <h3 class="mt-4 text-xl font-bold">Intégration & APIs</h3>
         <p class="mt-3 leading-7 text-gray-600">
           API, microservices, ESB, API Gateway, flux inter-applicatifs et intégration
@@ -224,8 +359,8 @@
         </p>
       </article>
 
-      <article class="hover-lift rounded-2xl border border-gray-200 bg-white p-7 hover:border-blue-200 hover:shadow-soft">
-        <p class="text-sm font-bold text-blue-600">03</p>
+      <article class="hover-lift rounded-2xl border border-gray-200 bg-white p-7 hover:border-orange-200 hover:shadow-soft">
+        <p class="text-sm font-bold text-orange-700">03</p>
         <h3 class="mt-4 text-xl font-bold">Full Stack Engineering</h3>
         <p class="mt-3 leading-7 text-gray-600">
           Backend, frontend et mobile avec une approche orientée performance,
@@ -233,8 +368,8 @@
         </p>
       </article>
 
-      <article class="hover-lift rounded-2xl border border-gray-200 bg-white p-7 hover:border-blue-200 hover:shadow-soft">
-        <p class="text-sm font-bold text-blue-600">04</p>
+      <article class="hover-lift rounded-2xl border border-gray-200 bg-white p-7 hover:border-orange-200 hover:shadow-soft">
+        <p class="text-sm font-bold text-orange-700">04</p>
         <h3 class="mt-4 text-xl font-bold">DevOps & Cloud</h3>
         <p class="mt-3 leading-7 text-gray-600">
           Conteneurisation, orchestration, CI/CD, automatisation, administration
@@ -242,8 +377,8 @@
         </p>
       </article>
 
-      <article class="hover-lift rounded-2xl border border-gray-200 bg-white p-7 hover:border-blue-200 hover:shadow-soft">
-        <p class="text-sm font-bold text-blue-600">05</p>
+      <article class="hover-lift rounded-2xl border border-gray-200 bg-white p-7 hover:border-orange-200 hover:shadow-soft">
+        <p class="text-sm font-bold text-orange-700">05</p>
         <h3 class="mt-4 text-xl font-bold">Leadership technique</h3>
         <p class="mt-3 leading-7 text-gray-600">
           Pilotage technique, coordination d'équipes, recrutement, encadrement,
@@ -251,8 +386,8 @@
         </p>
       </article>
 
-      <article class="hover-lift rounded-2xl border border-gray-200 bg-white p-7 hover:border-blue-200 hover:shadow-soft">
-        <p class="text-sm font-bold text-blue-600">06</p>
+      <article class="hover-lift rounded-2xl border border-gray-200 bg-white p-7 hover:border-orange-200 hover:shadow-soft">
+        <p class="text-sm font-bold text-orange-700">06</p>
         <h3 class="mt-4 text-xl font-bold">Transformation digitale</h3>
         <p class="mt-3 leading-7 text-gray-600">
           Modernisation des SI, digitalisation des processus, GED/SAE, reporting,
@@ -265,7 +400,7 @@
 
 <!-- STACK -->
 <section id="stack" class="mx-auto max-w-6xl px-5 py-20 lg:py-24">
-  <p class="text-sm font-semibold uppercase tracking-[0.16em] text-blue-600">03 — Stack</p>
+  <p class="text-sm font-semibold uppercase tracking-[0.16em] text-orange-700">03 — Stack</p>
   <h2 class="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">Technologies & plateformes</h2>
 
   <div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -347,7 +482,7 @@
   <div class="mx-auto max-w-6xl px-5 py-20 lg:py-24">
     <div class="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
       <div>
-        <p class="text-sm font-semibold uppercase tracking-[0.16em] text-blue-600">04 — Réalisations</p>
+        <p class="text-sm font-semibold uppercase tracking-[0.16em] text-orange-700">04 — Réalisations</p>
         <h2 class="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">Quelques projets</h2>
       </div>
       <p class="max-w-lg text-gray-500">
@@ -358,39 +493,39 @@
 
     <div class="mt-10 grid gap-5 md:grid-cols-2">
 
-      <article class="hover-lift rounded-2xl border border-gray-200 bg-white p-7 hover:border-blue-200 hover:shadow-soft">
-        <p class="text-xs font-bold uppercase tracking-wider text-blue-600">Services publics · GED</p>
+      <article class="hover-lift rounded-2xl border border-gray-200 bg-white p-7 hover:border-orange-200 hover:shadow-soft">
+        <p class="text-xs font-bold uppercase tracking-wider text-orange-700">Services publics · GED</p>
         <h3 class="mt-4 text-xl font-bold">Bibliothèque numérique du MASM</h3>
         <p class="mt-3 leading-7 text-gray-600">
           Plateforme de bibliothèque numérique et de gestion des archives,
           avec portail public, espace abonné et espace administrateur.
         </p>
         <a href="https://bibliotheque.social.gouv.bj/pe" target="_blank" rel="noopener noreferrer"
-           class="mt-6 inline-block text-sm font-semibold hover:text-blue-600">
+           class="mt-6 inline-block text-sm font-semibold hover:text-orange-700">
           Protection de l'enfance →
         </a>
         <br>
         <a href="https://bibliotheque.social.gouv.bj/vbg" target="_blank" rel="noopener noreferrer"
-           class="mt-2 inline-block text-sm font-semibold hover:text-blue-600">
+           class="mt-2 inline-block text-sm font-semibold hover:text-orange-700">
           Violences basées sur le genre →
         </a>
       </article>
 
-      <article class="hover-lift rounded-2xl border border-gray-200 bg-white p-7 hover:border-blue-200 hover:shadow-soft">
-        <p class="text-xs font-bold uppercase tracking-wider text-blue-600">Administration publique</p>
+      <article class="hover-lift rounded-2xl border border-gray-200 bg-white p-7 hover:border-orange-200 hover:shadow-soft">
+        <p class="text-xs font-bold uppercase tracking-wider text-orange-700">Administration publique</p>
         <h3 class="mt-4 text-xl font-bold">Portail des marchés publics du Bénin</h3>
         <p class="mt-3 leading-7 text-gray-600">
           Conception du portail web et de l'API serveur, migration de la base
           MySQL vers PostgreSQL et configuration du serveur de production.
         </p>
         <a href="https://marches-publics.bj/" target="_blank" rel="noopener noreferrer"
-           class="mt-6 inline-block text-sm font-semibold hover:text-blue-600">
+           class="mt-6 inline-block text-sm font-semibold hover:text-orange-700">
           Voir le portail →
         </a>
       </article>
 
-      <article class="hover-lift rounded-2xl border border-gray-200 bg-white p-7 hover:border-blue-200 hover:shadow-soft">
-        <p class="text-xs font-bold uppercase tracking-wider text-blue-600">Télécoms · QoS</p>
+      <article class="hover-lift rounded-2xl border border-gray-200 bg-white p-7 hover:border-orange-200 hover:shadow-soft">
+        <p class="text-xs font-bold uppercase tracking-wider text-orange-700">Télécoms · QoS</p>
         <h3 class="mt-4 text-xl font-bold">Digital User Experience — Bridge2E</h3>
         <p class="mt-3 leading-7 text-gray-600">
           Application web et mobile dédiée à l'analyse de la qualité réseau :
@@ -398,13 +533,13 @@
           avec dashboards et reporting QoS.
         </p>
         <a href="https://bridge2e.com/" target="_blank" rel="noopener noreferrer"
-           class="mt-6 inline-block text-sm font-semibold hover:text-blue-600">
+           class="mt-6 inline-block text-sm font-semibold hover:text-orange-700">
           Voir le projet →
         </a>
       </article>
 
-      <article class="hover-lift rounded-2xl border border-gray-200 bg-white p-7 hover:border-blue-200 hover:shadow-soft">
-        <p class="text-xs font-bold uppercase tracking-wider text-blue-600">GED · Transformation digitale</p>
+      <article class="hover-lift rounded-2xl border border-gray-200 bg-white p-7 hover:border-orange-200 hover:shadow-soft">
+        <p class="text-xs font-bold uppercase tracking-wider text-orange-700">GED · Transformation digitale</p>
         <h3 class="mt-4 text-xl font-bold">Systèmes GED — secteur public</h3>
         <p class="mt-3 leading-7 text-gray-600">
           Déploiement et exploitation de solutions de gestion électronique de documents
@@ -413,8 +548,8 @@
         </p>
       </article>
 
-      <article class="hover-lift rounded-2xl border border-gray-200 bg-white p-7 hover:border-blue-200 hover:shadow-soft">
-        <p class="text-xs font-bold uppercase tracking-wider text-blue-600">Finance · Recouvrement</p>
+      <article class="hover-lift rounded-2xl border border-gray-200 bg-white p-7 hover:border-orange-200 hover:shadow-soft">
+        <p class="text-xs font-bold uppercase tracking-wider text-orange-700">Finance · Recouvrement</p>
         <h3 class="mt-4 text-xl font-bold">Plateformes de Debt Collection</h3>
         <p class="mt-3 leading-7 text-gray-600">
           Architecture et développement de solutions pour plusieurs clients
@@ -423,8 +558,8 @@
         </p>
       </article>
 
-      <article class="hover-lift rounded-2xl border border-gray-200 bg-white p-7 hover:border-blue-200 hover:shadow-soft">
-        <p class="text-xs font-bold uppercase tracking-wider text-blue-600">Data · Reporting</p>
+      <article class="hover-lift rounded-2xl border border-gray-200 bg-white p-7 hover:border-orange-200 hover:shadow-soft">
+        <p class="text-xs font-bold uppercase tracking-wider text-orange-700">Data · Reporting</p>
         <h3 class="mt-4 text-xl font-bold">Reporting & Business Intelligence</h3>
         <p class="mt-3 leading-7 text-gray-600">
           Microservices et outils d'automatisation du reporting multi-métiers,
@@ -439,14 +574,14 @@
 
 <!-- EXPERIENCE -->
 <section id="experience" class="mx-auto max-w-6xl px-5 py-20 lg:py-24">
-  <p class="text-sm font-semibold uppercase tracking-[0.16em] text-blue-600">05 — Parcours</p>
+  <p class="text-sm font-semibold uppercase tracking-[0.16em] text-orange-700">05 — Parcours</p>
   <h2 class="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">Expérience professionnelle</h2>
 
   <div class="mt-12 max-w-4xl">
 
-    <article class="relative border-l-2 border-blue-100 pl-8 pb-12">
-      <span class="absolute -left-[7px] top-1 h-3 w-3 rounded-full bg-blue-600"></span>
-      <p class="text-sm font-semibold text-blue-600">Mars 2025 — Présent</p>
+    <article class="relative border-l-2 border-orange-100 pl-8 pb-12">
+      <span class="absolute -left-[7px] top-1 h-3 w-3 rounded-full bg-orange-700"></span>
+      <p class="text-sm font-semibold text-orange-700">Mars 2025 — Présent</p>
       <h3 class="mt-2 text-xl font-bold">VEONE — Ingénieur Logiciel Senior</h3>
       <ul class="mt-4 space-y-2 text-gray-600">
         <li>• Architecture technique et urbanisation du SI.</li>
@@ -530,7 +665,7 @@
     <details class="group rounded-2xl border border-gray-200 bg-gray-50 p-6">
       <summary class="cursor-pointer list-none font-semibold text-gray-900">
         Voir les expériences complémentaires
-        <span class="float-right text-blue-600 group-open:rotate-45">+</span>
+        <span class="float-right text-orange-700 group-open:rotate-45">+</span>
       </summary>
 
       <div class="mt-6 grid gap-5 sm:grid-cols-2">
@@ -577,21 +712,21 @@
   <div class="mx-auto max-w-6xl px-5 py-20 lg:py-24">
     <div class="grid gap-12 lg:grid-cols-[1fr_2fr]">
       <div>
-        <p class="text-sm font-semibold uppercase tracking-[0.16em] text-blue-600">06 — Certifications</p>
+        <p class="text-sm font-semibold uppercase tracking-[0.16em] text-orange-700">06 — Certifications</p>
         <h2 class="mt-3 text-3xl font-bold tracking-tight">Certifications techniques</h2>
       </div>
 
       <div class="grid gap-4 sm:grid-cols-3">
         <div class="rounded-2xl border border-gray-200 bg-white p-6">
-          <p class="text-sm font-bold text-blue-600">WSO2</p>
+          <p class="text-sm font-bold text-orange-700">WSO2</p>
           <h3 class="mt-3 font-bold">Certified Micro Integrator Practitioner</h3>
         </div>
         <div class="rounded-2xl border border-gray-200 bg-white p-6">
-          <p class="text-sm font-bold text-blue-600">WSO2</p>
+          <p class="text-sm font-bold text-orange-700">WSO2</p>
           <h3 class="mt-3 font-bold">Certified Micro Integrator Developer</h3>
         </div>
         <div class="rounded-2xl border border-gray-200 bg-white p-6">
-          <p class="text-sm font-bold text-blue-600">Oracle Cloud</p>
+          <p class="text-sm font-bold text-orange-700">Oracle Cloud</p>
           <h3 class="mt-3 font-bold">OCI Architect Associate</h3>
         </div>
       </div>
@@ -603,31 +738,31 @@
 <section id="education" class="mx-auto max-w-6xl px-5 py-20 lg:py-24">
   <div class="grid gap-12 lg:grid-cols-[1fr_2fr]">
     <div>
-      <p class="text-sm font-semibold uppercase tracking-[0.16em] text-blue-600">07 — Formation</p>
+      <p class="text-sm font-semibold uppercase tracking-[0.16em] text-orange-700">07 — Formation</p>
       <h2 class="mt-3 text-3xl font-bold tracking-tight">Formation académique</h2>
     </div>
 
     <div class="space-y-7">
       <div class="border-b border-gray-100 pb-7">
-        <p class="text-sm font-semibold text-blue-600">2022 — 2023</p>
+        <p class="text-sm font-semibold text-orange-700">2022 — 2023</p>
         <h3 class="mt-2 text-lg font-bold">Master en Architecture Logicielle</h3>
         <p class="mt-1 text-gray-500">École Supérieure de Génie Informatique (ESGI), Paris, France</p>
       </div>
 
       <div class="border-b border-gray-100 pb-7">
-        <p class="text-sm font-semibold text-blue-600">2021 — 2022</p>
+        <p class="text-sm font-semibold text-orange-700">2021 — 2022</p>
         <h3 class="mt-2 text-lg font-bold">Master Informatique, Réseaux, Télécoms — Option Architecture Logicielle</h3>
         <p class="mt-1 text-gray-500">ESGIS, Bénin</p>
       </div>
 
       <div class="border-b border-gray-100 pb-7">
-        <p class="text-sm font-semibold text-blue-600">2018 — 2019</p>
+        <p class="text-sm font-semibold text-orange-700">2018 — 2019</p>
         <h3 class="mt-2 text-lg font-bold">Master 1 — Systèmes d'Information et Réseaux Informatiques</h3>
         <p class="mt-1 text-gray-500">Institut de Formation et de Recherche en Informatique, Bénin</p>
       </div>
 
       <div>
-        <p class="text-sm font-semibold text-blue-600">2012 — 2015</p>
+        <p class="text-sm font-semibold text-orange-700">2012 — 2015</p>
         <h3 class="mt-2 text-lg font-bold">Licence — Génie Électrique et Informatique Industrielle, option Informatique</h3>
         <p class="mt-1 text-gray-500">Institut Universitaire de Technologie de Lokossa, Bénin</p>
       </div>
@@ -639,7 +774,7 @@
 <!-- CONTACT -->
 <section id="contact" class="mx-auto max-w-6xl px-5 py-24">
   <div class="overflow-hidden rounded-3xl bg-gray-950 px-7 py-12 text-white sm:px-12 sm:py-16">
-    <p class="text-sm font-semibold uppercase tracking-[0.16em] text-blue-400">08 — Contact</p>
+    <p class="text-sm font-semibold uppercase tracking-[0.16em] text-orange-400">08 — Contact</p>
 
     <h2 class="mt-5 max-w-3xl text-3xl font-bold tracking-tight sm:text-5xl">
       Construisons aujourd'hui les systèmes de demain.
@@ -647,7 +782,7 @@
     
     <div class="mt-9 flex flex-col gap-3 sm:flex-row">
       <a href="mailto:harriszinsouvi@gmail.com"
-         class="rounded-lg bg-white px-5 py-3 text-center font-semibold text-gray-950 hover:bg-blue-50">
+         class="rounded-lg bg-white px-5 py-3 text-center font-semibold text-gray-950 hover:bg-orange-50">
         harriszinsouvi@gmail.com
       </a>
 
@@ -682,6 +817,51 @@
 </footer>
 
 <script>
+  // ---------------------------------------------------------
+  // Theme: system preference by default, with localStorage.
+  // ---------------------------------------------------------
+  const root = document.documentElement;
+  const themeToggle = document.getElementById("theme-toggle");
+  const sunIcon = document.getElementById("theme-icon-sun");
+  const moonIcon = document.getElementById("theme-icon-moon");
+  const themeMeta = document.querySelector('meta[name="theme-color"]');
+
+  function applyTheme(theme) {
+    const isDark = theme === "dark";
+    root.classList.toggle("dark", isDark);
+
+    if (themeMeta) {
+      themeMeta.setAttribute("content", isDark ? "#0b0b0a" : "#C2410C");
+    }
+
+    if (themeToggle) {
+      themeToggle.setAttribute(
+        "aria-label",
+        isDark ? "Activer le mode clair" : "Activer le mode sombre"
+      );
+      themeToggle.setAttribute(
+        "title",
+        isDark ? "Mode clair" : "Mode sombre"
+      );
+    }
+
+    sunIcon?.classList.toggle("hidden", !isDark);
+    moonIcon?.classList.toggle("hidden", isDark);
+  }
+
+  const savedTheme = localStorage.getItem("theme");
+  const initialTheme =
+    savedTheme ||
+    (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+
+  applyTheme(initialTheme);
+
+  themeToggle?.addEventListener("click", () => {
+    const nextTheme = root.classList.contains("dark") ? "light" : "dark";
+    localStorage.setItem("theme", nextTheme);
+    applyTheme(nextTheme);
+  });
+
   document.getElementById("year").textContent = new Date().getFullYear();
 </script>
 
